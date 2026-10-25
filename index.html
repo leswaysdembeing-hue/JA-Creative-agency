@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>J&amp;A Creative Agency — Production audiovisuelle &amp; scénographie</title>
+<meta name="description" content="Maison de production audiovisuelle et scénographie événementielle panafricaine &amp; internationale. Yaoundé, Cameroun.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--g:#f0cd4f;--gb:#d3af37;--bg1:#0e0e0e;--bg2:#131313;--c1:#1b1b1b;--c2:#1f1f1f;--c3:#2a2a2a;--tx:#e6e3dc;--mu:#8b8b88;--ease:cubic-bezier(.2,.8,.2,1)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Montserrat',sans-serif;background:var(--bg1);color:var(--tx);font-weight:300;line-height:1.6;overflow-x:hidden}
+img{display:block;width:100%;height:100%;object-fit:cover}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+:focus-visible{outline:2px solid var(--g);outline-offset:3px}
+.wrap{max-width:1280px;margin:0 auto;padding:0 5%}
+section{padding:clamp(56px,8vw,104px) 0}
+.s1,.s3{background:var(--bg2)}
+.lb{font-size:.68rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--g)}
+.mu{color:var(--mu)}
+.btn{display:inline-block;position:relative;overflow:hidden;background:var(--gb);color:#141414;font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:15px 28px;transition:transform .3s var(--ease),background .3s}
+.btn:hover{background:var(--g);transform:translateY(-3px)}
+.btn:active{transform:scale(.95)}
+.lk{font-size:.66rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;display:inline-flex;gap:8px;align-items:center;transition:color .3s,gap .3s}
+.lk:hover{color:var(--g);gap:14px}
+/* hero */
+.meta{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:.62rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding-bottom:28px}
+.meta span:first-child,.meta span:last-child{color:var(--gb)}
+h1{font-size:clamp(2rem,4.6vw,3.4rem);font-weight:700;line-height:1.12;text-transform:uppercase;margin-bottom:clamp(28px,4vw,48px)}
+h1 .l2{display:block;color:var(--g);padding-left:9%}
+.hero-g{display:grid;grid-template-columns:1.85fr 1fr;gap:clamp(24px,4vw,56px);align-items:center}
+.media{position:relative;overflow:hidden;aspect-ratio:var(--ar,1.54);transform-style:preserve-3d;transition:transform .5s var(--ease)}
+.media img{scale:1.14;transition:scale 1.4s var(--ease)}
+.media::after{content:"";position:absolute;inset:0;background:radial-gradient(260px circle at var(--mx,50%) var(--my,50%),rgba(240,205,79,.18),transparent 70%);opacity:0;transition:opacity .4s;pointer-events:none}
+.media:hover::after{opacity:1}
+.media:hover img{scale:1.2}
+.reveal-img{clip-path:inset(0 0 0 0)}
+.js .reveal-img{clip-path:inset(0 100% 0 0);transition:clip-path 1.2s var(--ease)}
+.js .reveal-img.in{clip-path:inset(0 0 0 0)}
+.cap{position:absolute;left:16px;bottom:16px;max-width:42%;font-size:.7rem;color:#d9d6cf;z-index:2}
+.cap b{display:block;color:var(--g);font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:6px}
+.play{position:absolute;z-index:3;width:56px;height:56px;border-radius:50%;background:rgba(14,14,14,.55);border:1px solid var(--g);display:grid;place-items:center;top:50%;left:50%;margin:-28px 0 0 -28px;transition:transform .4s var(--ease),background .3s;backdrop-filter:blur(4px)}
+.play::before{content:"";border-left:14px solid var(--g);border-top:9px solid transparent;border-bottom:9px solid transparent;margin-left:4px}
+.play::after{content:"";position:absolute;inset:-1px;border-radius:50%;border:1px solid var(--g);animation:pulse 2.2s infinite}
+.hero-g .play{top:18px;left:auto;right:18px;margin:0;width:34px;height:34px}
+.hero-g .play::before{border-left-width:9px;border-top-width:6px;border-bottom-width:6px;margin-left:2px}
+.media:hover .play,.play:hover{transform:scale(1.15);background:var(--gb)}
+.media:hover .play::before,.play:hover::before{border-left-color:#111}
+@keyframes pulse{0%{transform:scale(1);opacity:.8}100%{transform:scale(1.7);opacity:0}}
+.manif .lb{margin-bottom:14px;display:block}
+.manif p{font-size:.95rem;margin-bottom:14px}
+.manif p.sm{font-size:.74rem;color:#b9b6ae;margin-bottom:28px}
+.manif .btn{margin-bottom:20px}
+.manif .lk{display:flex;width:max-content}
+/* conviction */
+.quote{font-size:clamp(1.4rem,2.9vw,2.2rem);font-weight:500;line-height:1.3;max-width:19em;margin:14px 0 clamp(40px,6vw,80px)}
+.conv-g{display:grid;grid-template-columns:.9fr 1.55fr;gap:clamp(28px,6vw,92px);align-items:center}
+.conv-g .media{--ar:.74}
+h3{font-size:clamp(1rem,1.6vw,1.2rem);font-weight:700;text-transform:uppercase;line-height:1.3;padding-bottom:14px;position:relative;margin-bottom:22px}
+h3::after{content:"";position:absolute;left:0;bottom:0;width:36px;height:2px;background:var(--g);transition:width .8s var(--ease) .6s}
+.js h3:not(.in)::after,.gs h3:not(.in)::after{width:0}
+.conv-g p.t{font-size:.9rem;color:#cfccc4;margin-bottom:24px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:30px}
+.tag{background:var(--c1);padding:18px 20px;transition:transform .4s var(--ease),background .3s}
+.tag:hover{transform:translateY(-4px);background:var(--c3)}
+.tag .lb{font-size:.58rem;color:var(--gb);display:block;margin-bottom:8px}
+.tag p{font-size:.72rem;color:#b9b6ae}
+.stats{display:flex;gap:clamp(24px,5vw,56px);flex-wrap:wrap}
+.stats b{display:block;font-size:1.5rem;font-weight:600;color:var(--g);line-height:1.2}
+.stats span{font-size:.56rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--mu)}
+/* portfolio */
+.ph{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:clamp(28px,4vw,48px)}
+h2{font-size:clamp(1.5rem,3vw,2.2rem);font-weight:600;text-transform:uppercase;line-height:1.2}
+.ph p{font-size:.72rem;color:#b9b6ae;max-width:23em}
+.proj{background:var(--c2);padding:clamp(16px,2.4vw,28px);display:grid;gap:clamp(20px,3vw,40px);transition:box-shadow .4s}
+.proj:hover{box-shadow:0 18px 50px rgba(0,0,0,.6),0 0 0 1px rgba(240,205,79,.25)}
+.p1{grid-template-columns:1.85fr 1fr;margin-bottom:28px}
+.p1 .media{--ar:1.6;cursor:pointer}
+.row2{display:grid;grid-template-columns:1.5fr 1fr;gap:28px}
+.row2 .proj{grid-template-columns:1fr;align-content:start}
+.p2 .media{--ar:1.77;cursor:pointer}.p3 .media{--ar:.8;cursor:pointer}
+.info{display:flex;flex-direction:column;gap:12px}
+.info .top{display:flex;justify-content:space-between;gap:10px}
+.info .top span:last-child{font-size:.6rem;font-weight:600;letter-spacing:.14em;color:var(--mu);text-transform:uppercase}
+.info h4{font-size:clamp(1.05rem,1.8vw,1.35rem);font-weight:700;text-transform:uppercase;line-height:1.25}
+.info p{font-size:.78rem;color:#b9b6ae}
+.bt{margin-top:auto;padding-top:22px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:.6rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+.p2 .bt,.p3 .bt{padding-top:60px}
+.bt .lk{color:var(--g)}
+/* savoir-faire */
+.s3 h2{max-width:15em;margin:14px 0 12px}
+.s3 .sub{font-size:.78rem;color:#b9b6ae;margin-bottom:clamp(28px,4vw,48px)}
+.sv{background:var(--c2);display:grid;grid-template-columns:.2fr 1fr 1.7fr;gap:clamp(16px,3vw,40px);padding:clamp(24px,3.4vw,40px) clamp(20px,3vw,40px);margin-bottom:22px;transition:transform .45s var(--ease),background .3s}
+.sv:hover{transform:translateX(10px);background:#242424}
+.sv .n{color:var(--gb);font-size:.62rem;font-weight:700;letter-spacing:.14em}
+.sv h5{font-size:clamp(1rem,1.7vw,1.25rem);font-weight:700;text-transform:uppercase;line-height:1.25}
+.sv h5+span{display:block;margin-top:8px;font-size:.56rem;font-weight:700;letter-spacing:.14em;color:var(--mu);text-transform:uppercase}
+.sv p{font-size:.78rem;color:#b9b6ae;margin-bottom:14px}
+.sv ul{list-style:none;display:flex;flex-wrap:wrap;gap:6px 22px;font-size:.66rem;color:#b9b6ae}
+.sv li::before{content:"• ";color:var(--mu)}
+/* contact */
+.ct{background:var(--c2);display:grid;grid-template-columns:1.25fr 1fr;gap:clamp(24px,4vw,56px);padding:clamp(28px,5vw,64px) clamp(22px,5vw,70px);align-items:center}
+.ct h2{margin:14px 0 20px}
+.ct p.t{font-size:.9rem;color:#cfccc4;max-width:28em;margin-bottom:30px}
+.ct .acts{display:flex;gap:28px;align-items:center;flex-wrap:wrap}
+.box{background:var(--c3);padding:clamp(20px,3vw,32px)}
+.box .lb{display:block;font-size:.58rem;margin-bottom:12px}
+.box .big{font-size:1.1rem;font-weight:400;line-height:1.3}
+.box .sm{font-size:.7rem;color:var(--mu);margin-bottom:22px}
+.box .m{font-size:.8rem;margin-bottom:6px}
+.box .sm2{font-size:.68rem;color:#6f6f6c;margin-bottom:22px}
+.box .ph2{font-size:.78rem}
+/* footer */
+footer{background:#0e0e0f;padding:clamp(48px,8vw,96px) 0 40px}
+.fg{display:grid;grid-template-columns:1.7fr 1fr 1fr;gap:32px;margin-bottom:clamp(48px,8vw,100px)}
+footer h6{font-size:clamp(1.1rem,2.2vw,1.55rem);font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:#ebe8e1;margin-bottom:16px}
+footer h6.h{font-size:.7rem;color:var(--g);letter-spacing:.14em;margin-bottom:26px}
+footer .d{font-size:.88rem;max-width:23em;color:#c9c5bb;margin-bottom:30px}
+footer .ad{font-size:1.15rem;font-weight:400;color:#f1eee8;margin-bottom:6px}
+footer .tel{font-size:.8rem;color:#bdb9ae}
+footer li{list-style:none;margin-bottom:14px}
+footer li a{font-size:1rem;color:#d8cfb8;display:inline-block;transition:color .3s,transform .3s var(--ease)}
+footer li a:hover{color:var(--g);transform:translateX(8px)}
+.fb{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:.66rem;font-weight:700;letter-spacing:.14em;color:#857f6b}
+.pin{width:34px;height:34px;fill:none;stroke:var(--g);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;margin-bottom:16px}
+/* réseaux + WhatsApp */
+.soc{display:flex;gap:12px;margin-top:26px}
+.soc a{width:42px;height:42px;border:1px solid rgba(240,205,79,.45);border-radius:50%;display:grid;place-items:center;color:var(--g);transition:background .3s,color .3s,border-color .3s}
+.soc a:hover{background:var(--gb);color:#111;border-color:var(--gb)}
+.soc svg,.wa svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.wa{position:fixed;right:max(18px,env(safe-area-inset-right));bottom:max(18px,env(safe-area-inset-bottom));z-index:90;width:56px;height:56px;border-radius:50%;background:#25d366;color:#fff;display:grid;place-items:center;box-shadow:0 10px 30px rgba(0,0,0,.5);transition:transform .4s var(--ease)}
+.wa svg{width:28px;height:28px}
+.wa:hover{transform:scale(1.1) rotate(-8deg)}
+.wa::after{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid #25d366;animation:pulse 2.4s infinite}
+/* modal */
+.modal{position:fixed;inset:0;z-index:100;display:grid;place-items:center;padding:20px;background:rgba(5,5,5,.92);backdrop-filter:blur(8px);opacity:0;visibility:hidden;transition:opacity .4s,visibility .4s}
+.modal.on{opacity:1;visibility:visible}
+.mbox{width:min(980px,100%);background:var(--c2);transform:translateY(40px) scale(.94);transition:transform .6s var(--ease);max-height:92vh;overflow:auto}
+.modal.on .mbox{transform:none}
+.mv{position:relative;aspect-ratio:16/9;background:#000}
+.mv iframe,.mv video,.mv img{position:absolute;inset:0;width:100%;height:100%;border:0;object-fit:cover}
+.mv .no{position:absolute;inset:auto 0 0;padding:14px 18px;background:linear-gradient(transparent,rgba(0,0,0,.85));font-size:.7rem;color:#cfccc4;z-index:2}
+.mi{padding:22px 26px 26px;display:flex;flex-direction:column;gap:8px}
+.mi h4{font-size:1.2rem;font-weight:700;text-transform:uppercase}
+.mi p{font-size:.82rem;color:#b9b6ae}
+.x{position:absolute;top:18px;right:22px;z-index:5;width:44px;height:44px;border:1px solid var(--g);border-radius:50%;color:var(--g);font-size:1.3rem;transition:transform .4s var(--ease),background .3s}
+.x:hover{transform:rotate(90deg);background:var(--gb);color:#111}
+/* effets */
+#bar{position:fixed;top:0;left:0;height:3px;width:100%;background:var(--g);transform:scaleX(0);transform-origin:0;z-index:99}
+.rip{position:fixed;width:12px;height:12px;margin:-6px 0 0 -6px;border-radius:50%;border:2px solid var(--g);pointer-events:none;z-index:200;animation:rip .7s var(--ease) forwards}
+@keyframes rip{to{transform:scale(7);opacity:0}}
+.js .w,.gs .w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.12em;margin-bottom:-.12em}
+.js .w>span{display:inline-block;transform:translateY(112%) rotate(4deg);transition:transform 1s var(--ease);transition-delay:calc(var(--i)*55ms + var(--d,0ms))}
+.js .in .w>span,.js .w.in>span{transform:none}
+.gs .w>span{display:inline-block;transform:translateY(112%) rotate(4deg);will-change:transform}
+.gs [data-r]{opacity:0}
+.gs .reveal-img:not(.in){clip-path:inset(0 100% 0 0)}
+.js [data-r]{opacity:0;transform:translateY(34px);transition:opacity .9s var(--ease),transform .9s var(--ease);transition-delay:var(--d,0ms)}
+.js [data-r].in{opacity:1;transform:none}
+@media(max-width:860px){
+.hero-g,.conv-g,.p1,.row2,.ct,.fg{grid-template-columns:1fr}
+.sv{grid-template-columns:1fr}.two{grid-template-columns:1fr}
+.p2 .bt,.p3 .bt{padding-top:24px}
+h1 .l2{padding-left:0}.cap{max-width:70%}
+.conv-g .media{--ar:.9}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.js .w>span,.js [data-r]{transform:none!important;opacity:1!important}.js .reveal-img{clip-path:none!important}html{scroll-behavior:auto}}
+</style>
+<script>document.documentElement.classList.add('gs')</script>
+</head>
+<body>
+<div id="bar"></div>
+
+<main>
+<!-- HERO : data-youtube / data-mp4 = vidéo du reel (voir README en bas du fichier) -->
+<section id="top" style="padding-top:clamp(40px,6vw,80px)">
+<div class="wrap">
+  <div class="meta"><span data-r>Studio Archive // N° 24-01</span><span data-r data-d="100">Yaoundé • Douala • International</span><span data-r data-d="200">Reel 2024 [4K DCI]</span></div>
+  <h1 aria-label="L'image qui marque. L'instant qui résonne."><span data-split>L'image qui marque.</span><span class="l2" data-split data-d="350">L'instant qui résonne.</span></h1>
+  <div class="hero-g">
+    <figure class="media reveal-img" data-par data-tilt data-open="reel" data-youtube="" data-mp4="" data-title="Reel 2024 [4K DCI]" data-desc="Notre sélection d'images et de scénographies en un seul plan.">
+      <img fetchpriority="high" src="images/hero.jpg" alt="Équipe de tournage sur le plateau A">
+      <button class="play" aria-label="Lire le reel"></button>
+      <figcaption class="cap"><b>Plateau A // Prise directe</b>Caméra grand capteur, optiques anamorphiques &amp; régie mobile tout-terrain.</figcaption>
+    </figure>
+    <div class="manif">
+      <span class="lb" data-r>Manifeste visuel</span>
+      <p data-r data-d="100">De la conception cinématographique narrative à la scénographie monumentale d'événements officiels. Nous déployons un regard exigeant, né au cœur de l'Afrique pour rayonner sur la scène globale.</p>
+      <p class="sm" data-r data-d="200">Fiction, documentaires engagés, sommets d'envergure, identités de marques qui traversent le temps.</p>
+      <a class="btn" href="#realisations" data-r data-d="300">Découvrir nos réalisations</a>
+      <a class="lk" href="#conviction" data-r data-d="400">Vision &amp; philosophie <span>→</span></a>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="s1" id="conviction">
+<div class="wrap">
+  <span class="lb" data-r>01 / Conviction</span>
+  <p class="quote" data-split>« Chaque seconde filmée, chaque projecteur allumé raconte l'histoire de femmes et d'hommes passionnés par l'impact du récit. »</p>
+  <div class="conv-g">
+    <figure class="media reveal-img" data-par data-tilt>
+      <img loading="lazy" decoding="async" src="images/portrait.jpg" alt="Direction de plateau, tournage nocturne à Yaoundé">
+      <figcaption class="cap" style="max-width:80%"><b>Direction de plateau</b>Tournage nocturne — Yaoundé, Centre.</figcaption>
+    </figure>
+    <div>
+      <h3 data-split>La rigueur technique, le souffle d'auteur.</h3>
+      <p class="t" data-r>Nous ne croyons pas à la simple accumulation d'artifices technologiques. Une optique de cinéma, un pupitre de mixage lumière ou une installation sonore à 360° ne valent que par l'émotion humaine qu'ils décuplent.</p>
+      <div class="two">
+        <div class="tag" data-r data-d="100"><span class="lb">Écriture &amp; cadrage</span><p>Prise de vue grand format, étalonnage précis respectant les carnations africaines, narration sans compromis.</p></div>
+        <div class="tag" data-r data-d="200"><span class="lb">Immersion scénique</span><p>Acoustique millimétrée, régie d'éclairage dramatique conçue sur mesure pour les palais de congrès et scènes vivantes.</p></div>
+      </div>
+      <div class="stats" data-r data-d="150">
+        <div><b data-count="12" data-suf="+">12+</b><span>Années d'artisanat</span></div>
+        <div><b data-count="180" data-suf="+">180+</b><span>Projets délivrés</span></div>
+        <div><b data-count="8" data-pad="2">08</b><span>Pays d'intervention</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- BIBLIOTHÈQUE DE RÉALISATIONS -->
+<section id="realisations">
+<div class="wrap">
+  <div class="ph">
+    <div><span class="lb" data-r>02 / Portfolio sélectionné</span><h2 data-split>Œuvres &amp; scénographies</h2></div>
+    <p data-r data-d="150">Chaque projet est traité comme une pièce singulière, associant maîtrise industrielle et pureté formelle.</p>
+  </div>
+
+  <!-- Pour chaque projet : renseigne data-youtube (identifiant YouTube), OU data-mp4 (ex : videos/projet1.mp4),
+       et data-preview (petit mp4 muet qui se lance au survol, ex : videos/projet1-preview.mp4) -->
+  <article class="proj p1" data-r data-youtube="" data-mp4="" data-preview="">
+    <figure class="media reveal-img" data-par data-tilt data-open>
+      <img loading="lazy" decoding="async" src="images/projet1.jpg" alt="Régie son et lumière, Nuit de l'Excellence Africaine"><button class="play" aria-label="Voir la vidéo"></button>
+    </figure>
+    <div class="info">
+      <div class="top"><span class="lb">Projet 01</span><span>Prestige Live // 2024</span></div>
+      <h4>Nuit de l'excellence africaine</h4>
+      <p>Régie générale audiovisuelle, son spatialisé et conception d'une scénographie lumineuse dorée pour un parterre institutionnel de 1 200 invités.</p>
+      <div class="bt"><span>Palais des Congrès • Yaoundé</span><a class="lk" href="#" data-open>Fiche technique <span>→</span></a></div>
+    </div>
+  </article>
+
+  <div class="row2">
+    <article class="proj p2" data-r data-youtube="" data-mp4="" data-preview="">
+      <figure class="media reveal-img" data-par data-tilt data-open>
+        <img loading="lazy" decoding="async" src="images/projet2.jpg" alt="Plateau de tournage, Héritage &amp; Terres d'Avenir"><button class="play" aria-label="Voir la vidéo"></button>
+      </figure>
+      <div class="info">
+        <div class="top"><span class="lb">Projet 02</span><span>Campagne cinéma // 2023</span></div>
+        <h4>Héritage &amp; terres d'avenir</h4>
+        <p>Film manifeste tourné en 35mm numérique à travers cinq régions du Cameroun pour une institution financière panafricaine.</p>
+        <div class="bt"><span>Diffusion panafricaine &amp; numérique</span><a class="lk" href="#" data-open>Visionner <span>→</span></a></div>
+      </div>
+    </article>
+    <article class="proj p3" data-r data-d="150" data-youtube="" data-mp4="" data-preview="">
+      <figure class="media reveal-img" data-par data-tilt data-open>
+        <img loading="lazy" decoding="async" src="images/projet3.jpg" alt="Série documentaire, Rythmes d'Ekié"><button class="play" aria-label="Voir la vidéo"></button>
+      </figure>
+      <div class="info">
+        <div class="top"><span class="lb">Projet 03</span><span>Série documentaire // 2023</span></div>
+        <h4>Rythmes d'Ekié</h4>
+        <p>Immersion de six mois au sein des ateliers de création indépendante à Yaoundé. Regards croisés, son direct sans artifice.</p>
+        <div class="bt"><span>Festival &amp; diffusion VOD</span><a class="lk" href="#" data-open>En savoir plus <span>→</span></a></div>
+      </div>
+    </article>
+  </div>
+</div>
+</section>
+
+<section class="s3" id="savoir-faire">
+<div class="wrap">
+  <span class="lb" data-r>03 / Savoir-faire</span>
+  <h2 data-split>Ce que nous façonnons, de la première esquisse au direct.</h2>
+  <p class="sub" data-r>Une chaîne de fabrication intégrée garantissant une cohérence esthétique totale, sans dispersion ni intermédiaires.</p>
+  <div class="sv" data-r><span class="n">01</span><div><h5>Cinéma &amp; production publicitaire</h5><span>Image • Réalisation • Caméras cinéma</span></div><div><p>De l'écriture du script jusqu'au découpage technique. Nous mobilisons des équipes de tournage chevronnées (chefs opérateurs, preneurs de son, machinistes) avec des équipements homologués et prisés pour des images d'une texture organique et vivante.</p><ul><li>Direction de la photographie</li><li>Casting &amp; repérages</li><li>Étalonnage DaVinci Resolve</li><li>Prise de son multi-pistes</li></ul></div></div>
+  <div class="sv" data-r><span class="n">02</span><div><h5>Événements &amp; scénographie technique</h5><span>Lumière • Son • Régie générale</span></div><div><p>Mise en scène d'événements solennels, galas de prestige, concerts et conférences internationales. Nous maîtrisons la direction technique globale : conception de plans de feu, sonorisation haute fidélité sans réverbération parasite, et diffusion vidéo multi-écrans sans temps de latence.</p><ul><li>Pupitres d'éclairage DMX</li><li>Écrans LED ultra-haute définition</li><li>Traduction simultanée</li><li>Régie broadcast multi-caméras</li></ul></div></div>
+  <div class="sv" data-r><span class="n">03</span><div><h5>Post-production &amp; design sonore</h5><span>Montage • Mixage • Motion graphic</span></div><div><p>Le film se réinvente au montage. Nous assurons l'assemblage rythmique, la création d'animations typographiques sur mesure, le nettoyage acoustique et le mixage aux normes de diffusion télévisuelle (EBU R128) ou streaming international.</p><ul><li>Montage narratif</li><li>Sound design original</li><li>Habillage graphique</li><li>Archivage master non compressé</li></ul></div></div>
+</div>
+</section>
+
+<section id="contact">
+<div class="wrap">
+  <div class="ct" data-r>
+    <div>
+      <span class="lb">04 / Contact studio</span>
+      <h2 data-split>Donnons vie à votre prochaine histoire.</h2>
+      <p class="t">Qu'il s'agisse d'un long-métrage, d'une campagne de marque ou de la scénographie technique d'un sommet d'État, nos réalisateurs et régisseurs sont à votre écoute pour échanger en toute franchise.</p>
+      <div class="acts"><a class="btn" href="mailto:contact@exemple.com">Écrire au studio</a><a class="lk" href="tel:+237698120856">☏ Ligne directe Yaoundé</a></div>
+    </div>
+    <div class="box">
+      <span class="lb">Bureau principal</span>
+      <div class="big">Yaoundé, Jouvence</div><div class="sm">Cameroun — Afrique Centrale</div>
+      <span class="lb">Disponibilité régie</span>
+      <div class="m">Lundi au Samedi · 08h00 – 19h00 (WAT)</div>
+      <div class="sm2">Interventions de plateau disponibles 24/7 sur calendrier de tournage.</div>
+      <span class="lb" style="color:var(--mu)">Téléphones directs :</span>
+      <div class="ph2">+237 698 12 08 56 / +237 686 28 08 09</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="s1" id="localisation">
+<div class="wrap">
+  <div class="ct" data-r>
+    <div>
+      <span class="lb">05 / Localisation</span>
+      <h2 data-split>Notre atelier audiovisuel à Yaoundé.</h2>
+      <p class="t">Retrouvez-nous à Yaoundé, en face du restaurant-bar Le Click. Pour préparer votre venue ou convenir d'un rendez-vous, écrivez-nous directement sur WhatsApp.</p>
+      <div class="acts"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=restaurant+bar+Le+Click+Yaound%C3%A9" target="_blank" rel="noopener">Ouvrir dans Google Maps</a><a class="lk" href="https://wa.me/237698120856?text=Bonjour%2C%20pouvez-vous%20me%20guider%20jusqu%27%C3%A0%20votre%20atelier%20%3F" target="_blank" rel="noopener">Demander l'itinéraire <span>→</span></a></div>
+    </div>
+    <div class="box">
+      <svg class="pin" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6.5-6-6.5-11a6.5 6.5 0 0 1 13 0c0 5-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/></svg>
+      <span class="lb">Repère</span>
+      <div class="big">En face du restaurant-bar Le Click</div><div class="sm">Yaoundé, Cameroun</div>
+      <span class="lb">Atelier audiovisuel</span>
+      <div class="m">J&amp;A Creative Agency</div>
+      <div class="sm2">Tournages, régie et post-production.</div>
+    </div>
+  </div>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="wrap">
+  <div class="fg">
+    <div data-r><h6>J&amp;A Creative Agency</h6><p class="d">Maison de production audiovisuelle et scénographie événementielle panafricaine &amp; internationale.</p><div class="ad">Yaoundé, Jouvence, Cameroun</div><div class="tel">+237 698 12 08 56 / +237 686 28 08 09</div></div>
+    <div data-r data-d="120"><h6 class="h">Navigation</h6><ul><li><a href="#realisations">Réalisations</a></li><li><a href="#savoir-faire">Métiers &amp; Savoir-faire</a></li><li><a href="#conviction">L'Équipe</a></li><li><a href="#contact">Contact</a></li></ul></div>
+    <div data-r data-d="240"><h6 class="h">Réseaux &amp; Diffusion</h6><ul><li><a href="#" target="_blank" rel="noopener">Vimeo Archive</a></li><li><a href="#" target="_blank" rel="noopener">Instagram Studio</a></li><li><a href="#" target="_blank" rel="noopener">LinkedIn Pro</a></li><li><a href="#" target="_blank" rel="noopener">YouTube Channel</a></li></ul>
+<div class="soc">
+<a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M14 8.5h2.5V4.5H14c-2.2 0-3.5 1.5-3.5 3.5v2H8v3.7h2.5V20h3.7v-6.3h2.6l.5-3.7h-3.1V8.9c0-.3.3-.4.8-.4z"/></svg></a>
+<a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".8" fill="currentColor"/></svg></a>
+<a href="https://www.tiktok.com/" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M14 3.5v11.2a3.6 3.6 0 1 1-3.6-3.6M14 3.5c.3 2.5 1.9 4.1 4.6 4.3"/></svg></a>
+</div></div>
+  </div>
+  <div class="fb"><span>© 2026 J&amp;A Creative Agency. Tous droits réservés.</span><span>Yaoundé • Douala • International</span></div>
+</div>
+</footer>
+
+<a class="wa" href="https://wa.me/237698120856?text=Bonjour%20J%26A%20Creative%20Agency%2C%20je%20souhaite%20discuter%20d%27un%20projet." target="_blank" rel="noopener" aria-label="Nous écrire sur WhatsApp"><svg viewBox="0 0 24 24"><path d="M3.6 20.4l1.3-4.4A8.4 8.4 0 1 1 8 19.1z"/><path d="M9.2 8.8c.3 2.2 2.5 4.4 4.9 5l1.2-1.1-1.8-1-.8.7c-.8-.3-1.6-1.1-2-2l.7-.8-1-1.8z" fill="currentColor" stroke="none"/></svg></a>
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Lecteur vidéo">
+  <div class="mbox" style="position:relative"><button class="x" id="mx" aria-label="Fermer">×</button><div class="mv" id="mv"></div><div class="mi"><span class="lb" id="mc"></span><h4 id="mt"></h4><p id="md"></p></div></div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+const H=document.documentElement,$=(s,c=document)=>[...c.querySelectorAll(s)];
+const calm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+const G=!!(window.gsap&&window.ScrollTrigger);
+if(!G){H.classList.remove('gs');H.classList.add('js')}else if(calm)H.classList.remove('gs');
+
+/* 1. Découpage des textes mot par mot */
+$('[data-split]').forEach(el=>{
+  const t=el.textContent.trim();el.setAttribute('aria-label',t);el.textContent='';
+  if(el.dataset.d)el.style.setProperty('--d',el.dataset.d+'ms');
+  t.split(/\s+/).forEach((w,i)=>{
+    const o=document.createElement('span'),s=document.createElement('span');
+    o.className='w';o.setAttribute('aria-hidden','true');s.textContent=w;s.style.setProperty('--i',i);
+    o.append(s);el.append(o,' ');
+  });
+});
+
+/* 2. Apparition au défilement + compteurs */
+function count(b){
+  const n=+b.dataset.count,suf=b.dataset.suf||'',pad=+b.dataset.pad||0,t0=performance.now();
+  (function f(t){const p=Math.min((t-t0)/1600,1),v=Math.round(n*(1-Math.pow(1-p,4)));
+    b.textContent=String(v).padStart(pad,'0')+suf;if(p<1)requestAnimationFrame(f)})(t0);
+}
+const io=new IntersectionObserver(es=>es.forEach(e=>{
+  if(!e.isIntersecting)return;
+  e.target.classList.add('in');
+  $('[data-count]',e.target).forEach(count);
+  const im=e.target.querySelector('.media');if(im)im.classList.add('in');
+  if(e.target.hasAttribute('data-r'))setTimeout(()=>e.target.removeAttribute('data-r'),1500+(+e.target.dataset.d||0));
+  io.unobserve(e.target);
+}),{threshold:.15,rootMargin:'0px 0px -6% 0px'});
+if(!G)$('[data-split],[data-r],.reveal-img').forEach(el=>io.observe(el));
+
+/* 3. Barre de progression + parallaxe */
+const bar=document.getElementById('bar'),par=$('[data-par] img');
+let tick=false;
+function onScroll(){
+  const h=document.documentElement;
+  bar.style.transform='scaleX('+(scrollY/(h.scrollHeight-innerHeight||1))+')';
+  if(!calm)par.forEach(im=>{const r=im.parentElement.getBoundingClientRect();
+    if(r.bottom>0&&r.top<innerHeight)im.style.translate='0 '+((r.top+r.height/2-innerHeight/2)*-.06)+'px'});
+  tick=false;
+}
+if(!G){addEventListener('scroll',()=>{if(!tick){tick=true;requestAnimationFrame(onScroll)}},{passive:true});onScroll()}
+
+/* 4. Inclinaison 3D + halo lumineux sur les médias */
+if(!calm&&matchMedia('(hover:hover)').matches)$('[data-tilt]').forEach(m=>{
+  m.addEventListener('pointermove',e=>{
+    const r=m.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;
+    m.style.setProperty('--mx',x*100+'%');m.style.setProperty('--my',y*100+'%');
+    m.style.transform='perspective(900px) rotateY('+((x-.5)*6)+'deg) rotateX('+((.5-y)*6)+'deg)';
+  });
+  m.addEventListener('pointerleave',()=>m.style.transform='');
+});
+
+/* 5. Prévisualisation vidéo au survol (data-preview) */
+$('.proj').forEach(p=>{
+  const src=p.dataset.preview;if(!src)return;
+  const m=p.querySelector('.media');let v;
+  m.addEventListener('pointerenter',()=>{
+    if(!v){v=document.createElement('video');v.src=src;v.muted=true;v.loop=true;v.playsInline=true;
+      v.style.cssText='position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .5s';m.prepend(v)}
+    v.play();v.style.opacity=1});
+  m.addEventListener('pointerleave',()=>{if(v){v.style.opacity=0;v.pause()}});
+});
+
+/* 6. Lecteur vidéo plein écran */
+const modal=document.getElementById('modal'),mv=document.getElementById('mv');
+let last;
+function openVid(host,trigger){
+  last=trigger;
+  const yt=host.dataset.youtube,mp=host.dataset.mp4,img=host.querySelector('img');
+  mv.innerHTML='';
+  if(yt){const f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/'+yt+'?autoplay=1&rel=0';f.allow='autoplay; fullscreen; picture-in-picture';f.allowFullscreen=true;mv.append(f)}
+  else if(mp){const v=document.createElement('video');v.src=mp;v.controls=true;v.autoplay=true;v.playsInline=true;mv.append(v)}
+  else{const i=img.cloneNode();mv.append(i);const n=document.createElement('div');n.className='no';n.textContent='Vidéo bientôt disponible.';mv.append(n)}
+  const h4=host.querySelector('h4'),lbs=host.querySelectorAll('.top span'),p=host.querySelector('.info p');
+  document.getElementById('mt').textContent=host.dataset.title||(h4&&h4.textContent)||'';
+  document.getElementById('mc').textContent=lbs.length?lbs[0].textContent+' — '+lbs[1].textContent:'J&A Creative Agency';
+  document.getElementById('md').textContent=host.dataset.desc||(p&&p.textContent)||'';
+  modal.classList.add('on');document.body.style.overflow='hidden';document.getElementById('mx').focus();
+}
+function closeVid(){modal.classList.remove('on');document.body.style.overflow='';setTimeout(()=>mv.innerHTML='',400);if(last)last.focus()}
+document.addEventListener('click',e=>{
+  const t=e.target.closest('[data-open]');
+  if(t){e.preventDefault();openVid(t.closest('.proj')||t,t)}
+  if(e.target===modal||e.target.closest('#mx'))closeVid();
+});
+addEventListener('keydown',e=>{if(e.key==='Escape'&&modal.classList.contains('on'))closeVid()});
+
+/* 8. GSAP + ScrollTrigger (si indisponible, le code ci-dessus prend le relais) */
+if(G&&!calm){
+  gsap.registerPlugin(ScrollTrigger);ScrollTrigger.config({ignoreMobileResize:true});
+  const done=el=>{el.removeAttribute('data-r');gsap.set(el,{clearProps:'transform,opacity'})};
+  const unveil=el=>{el.classList.add('in');gsap.set(el,{clearProps:'clipPath'})};
+  gsap.timeline({defaults:{ease:'expo.out'}})
+    .fromTo('.meta span',{y:-18,opacity:0},{y:0,opacity:1,duration:1,stagger:.12,onComplete:()=>$('.meta span').forEach(done)})
+    .fromTo('h1 .w>span',{yPercent:112,rotate:4},{yPercent:0,rotate:0,duration:1.3,stagger:.07},'-=.7')
+    .fromTo('.hero-g .media',{clipPath:'inset(0 100% 0 0)'},{clipPath:'inset(0 0% 0 0)',duration:1.5,ease:'power4.inOut',onComplete:()=>unveil($('.hero-g .media')[0])},'-=1')
+    .fromTo('.hero-g .media img',{scale:1.3},{scale:1,duration:2},'<')
+    .fromTo('.manif>*',{y:34,opacity:0},{y:0,opacity:1,duration:1,stagger:.1,onComplete:()=>$('.manif>*').forEach(done)},'-=1.1');
+  $('[data-split]').forEach(el=>{if(el.closest('h1'))return;
+    gsap.fromTo($('.w>span',el),{yPercent:112,rotate:4},{yPercent:0,rotate:0,duration:1.1,ease:'expo.out',stagger:.045,
+      scrollTrigger:{trigger:el,start:'top 88%',once:true,onEnter:()=>el.classList.add('in')}})});
+  $('[data-r]').forEach(el=>{if(el.closest('#top'))return;
+    const from=el.classList.contains('sv')?{x:-50}:{y:36};
+    if(el.classList.contains('proj'))from.scale=.97;
+    gsap.fromTo(el,{...from,opacity:0},{x:0,y:0,scale:1,opacity:1,duration:1.1,ease:'power3.out',delay:(+el.dataset.d||0)/1000,
+      scrollTrigger:{trigger:el,start:'top 90%',once:true},onComplete:()=>done(el)})});
+  $('.reveal-img').forEach(el=>{if(el.closest('#top'))return;
+    gsap.fromTo(el,{clipPath:'inset(0 100% 0 0)'},{clipPath:'inset(0 0% 0 0)',duration:1.4,ease:'power4.inOut',
+      scrollTrigger:{trigger:el,start:'top 85%',once:true},onComplete:()=>unveil(el)})});
+  $('[data-par]').forEach(f=>gsap.fromTo($('img',f),{yPercent:-5},{yPercent:5,ease:'none',
+    scrollTrigger:{trigger:f,start:'top bottom',end:'bottom top',scrub:.6}}));
+  gsap.to('#top h1',{yPercent:-10,ease:'none',scrollTrigger:{trigger:'#top',start:'top top',end:'bottom top',scrub:true}});
+  $('[data-count]').forEach(b=>{const n=+b.dataset.count,suf=b.dataset.suf||'',pad=+b.dataset.pad||0,o={v:0};
+    ScrollTrigger.create({trigger:b,start:'top 92%',once:true,onEnter:()=>gsap.to(o,{v:n,duration:1.8,ease:'power3.out',
+      onUpdate:()=>b.textContent=String(Math.round(o.v)).padStart(pad,'0')+suf})})});
+  gsap.fromTo('#bar',{scaleX:0},{scaleX:1,ease:'none',scrollTrigger:{start:0,end:'max',scrub:.3}});
+  if(matchMedia('(hover:hover)').matches)$('.btn,.soc a,.wa').forEach(b=>{
+    const qx=gsap.quickTo(b,'x',{duration:.5,ease:'power3'}),qy=gsap.quickTo(b,'y',{duration:.5,ease:'power3'});
+    b.addEventListener('pointermove',e=>{const r=b.getBoundingClientRect();qx((e.clientX-r.left-r.width/2)*.28);qy((e.clientY-r.top-r.height/2)*.28)});
+    b.addEventListener('pointerleave',()=>{qx(0);qy(0)});
+  });
+  $('.btn,.lk,.soc a,.wa').forEach(b=>{
+    b.addEventListener('pointerdown',()=>gsap.to(b,{scale:.93,duration:.15}));
+    ['pointerup','pointercancel','pointerleave'].forEach(ev=>b.addEventListener(ev,()=>gsap.to(b,{scale:1,duration:.7,ease:'elastic.out(1,.4)',overwrite:'auto'})));
+  });
+  gsap.fromTo('.wa',{scale:0,rotate:-90},{scale:1,rotate:0,duration:.9,ease:'back.out(2)',delay:2.2});
+  addEventListener('load',()=>ScrollTrigger.refresh());
+}
+
+/* 7. Onde dorée à chaque clic, partout */
+addEventListener('pointerdown',e=>{
+  if(calm)return;
+  const r=document.createElement('span');r.className='rip';r.style.left=e.clientX+'px';r.style.top=e.clientY+'px';
+  document.body.append(r);setTimeout(()=>r.remove(),750);
+});
+</script>
+<!--
+README (pour toi) :
+1. Dossier images/ : remplace hero.jpg, portrait.jpg, projet1.jpg, projet2.jpg, projet3.jpg par tes vraies photos (mêmes noms).
+2. Vidéos : dans chaque <article class="proj" ...>, remplis data-youtube="ID_YOUTUBE" ou data-mp4="videos/nom.mp4".
+   data-preview="videos/nom-preview.mp4" = petit extrait muet qui se lance au survol. Même chose pour le reel sur la photo d'ouverture.
+3. Remplace mailto:contact@exemple.com, les numéros et les liens "#" des réseaux sociaux.
+-->
+</body>
+</html>
