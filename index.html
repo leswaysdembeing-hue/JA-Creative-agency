@@ -79,6 +79,10 @@ h2{font-size:clamp(1.5rem,3vw,2.2rem);font-weight:600;text-transform:uppercase;l
 .proj{background:var(--c2);padding:clamp(16px,2.4vw,28px);display:grid;gap:clamp(20px,3vw,40px);transition:box-shadow .4s}
 .proj:hover{box-shadow:0 18px 50px rgba(0,0,0,.6),0 0 0 1px rgba(240,205,79,.25)}
 .p1{grid-template-columns:1.85fr 1fr;margin-bottom:28px}
+.row2{margin-bottom:28px}
+.hero-g .media{--ar:1.25}.hero-g .media img{object-position:50% 14%}
+.hero-g .media::before{content:"";position:absolute;inset:auto 0 0;height:42%;background:linear-gradient(transparent,rgba(0,0,0,.78));z-index:1;pointer-events:none}
+.cap{text-shadow:0 1px 8px rgba(0,0,0,.8)}
 .p1 .media{--ar:1.6;cursor:pointer}
 .row2{display:grid;grid-template-columns:1.5fr 1fr;gap:28px}
 .row2 .proj{grid-template-columns:1fr;align-content:start}
@@ -127,6 +131,12 @@ footer li a{font-size:1rem;color:#d8cfb8;display:inline-block;transition:color .
 footer li a:hover{color:var(--g);transform:translateX(8px)}
 .fb{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:.66rem;font-weight:700;letter-spacing:.14em;color:#857f6b}
 .pin{width:34px;height:34px;fill:none;stroke:var(--g);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;margin-bottom:16px}
+.play.zoom::before{border:0;margin:0;content:"+";color:var(--g);font-size:1.9rem;font-weight:300;line-height:1}
+.media:hover .play.zoom::before,.play.zoom:hover::before{color:#111}
+.mv img.ph{object-fit:contain;background:#000}
+.mv.vert{aspect-ratio:9/16;height:min(78vh,720px);width:auto;margin:0 auto}
+.nv{position:absolute;top:50%;transform:translateY(-50%);z-index:4;width:46px;height:46px;border-radius:50%;border:1px solid var(--g);color:var(--g);font-size:1.5rem;background:rgba(14,14,14,.6);transition:background .3s,color .3s}
+.nv:hover{background:var(--gb);color:#111}.pv{left:14px}.nx{right:14px}
 /* réseaux + WhatsApp */
 .soc{display:flex;gap:12px;margin-top:26px}
 .soc a{width:42px;height:42px;border:1px solid rgba(240,205,79,.45);border-radius:50%;display:grid;place-items:center;color:var(--g);transition:background .3s,color .3s,border-color .3s}
@@ -182,10 +192,10 @@ h1 .l2{padding-left:0}.cap{max-width:70%}
   <div class="meta"><span data-r>Studio Archive // N° 24-01</span><span data-r data-d="100">Yaoundé • Douala • International</span><span data-r data-d="200">Reel 2024 [4K DCI]</span></div>
   <h1 aria-label="L'image qui marque. L'instant qui résonne."><span data-split>L'image qui marque.</span><span class="l2" data-split data-d="350">L'instant qui résonne.</span></h1>
   <div class="hero-g">
-    <figure class="media reveal-img" data-par data-tilt data-open="reel" data-youtube="" data-mp4="" data-title="Reel 2024 [4K DCI]" data-desc="Notre sélection d'images et de scénographies en un seul plan.">
-      <img fetchpriority="high" src="images/hero.jpg" alt="Équipe de tournage sur le plateau A">
+    <figure class="media reveal-img" data-par data-tilt data-open="reel" data-youtube="" data-mp4="videos/spot.mp4" data-vert="1" data-title="Spot publicitaire — J&amp;A Creative Agency" data-desc="Le spot qui présente notre maison de production.">
+      <img fetchpriority="high" src="images/team.jpg" alt="L'équipe de J&amp;A Creative Agency">
       <button class="play" aria-label="Lire le reel"></button>
-      <figcaption class="cap"><b>Plateau A // Prise directe</b>Caméra grand capteur, optiques anamorphiques &amp; régie mobile tout-terrain.</figcaption>
+      <figcaption class="cap"><b>L'équipe // J&amp;A Creative Agency</b>Réalisateurs, opérateurs et régisseurs réunis autour de chaque image.</figcaption>
     </figure>
     <div class="manif">
       <span class="lb" data-r>Manifeste visuel</span>
@@ -204,8 +214,8 @@ h1 .l2{padding-left:0}.cap{max-width:70%}
   <p class="quote" data-split>« Chaque seconde filmée, chaque projecteur allumé raconte l'histoire de femmes et d'hommes passionnés par l'impact du récit. »</p>
   <div class="conv-g">
     <figure class="media reveal-img" data-par data-tilt>
-      <img loading="lazy" decoding="async" src="images/portrait.jpg" alt="Direction de plateau, tournage nocturne à Yaoundé">
-      <figcaption class="cap" style="max-width:80%"><b>Direction de plateau</b>Tournage nocturne — Yaoundé, Centre.</figcaption>
+      <img loading="lazy" decoding="async" src="images/shoot3.jpg" alt="Shooting créatif, portrait aux pétales de rose">
+      <figcaption class="cap" style="max-width:80%"><b>Direction artistique</b>Shooting créatif en studio.</figcaption>
     </figure>
     <div>
       <h3 data-split>La rigueur technique, le souffle d'auteur.</h3>
@@ -232,44 +242,86 @@ h1 .l2{padding-left:0}.cap{max-width:70%}
     <p data-r data-d="150">Chaque projet est traité comme une pièce singulière, associant maîtrise industrielle et pureté formelle.</p>
   </div>
 
-  <!-- Pour chaque projet : renseigne data-youtube (identifiant YouTube), OU data-mp4 (ex : videos/projet1.mp4),
-       et data-preview (petit mp4 muet qui se lance au survol, ex : videos/projet1-preview.mp4) -->
-  <article class="proj p1" data-r data-youtube="" data-mp4="" data-preview="">
-    <figure class="media reveal-img" data-par data-tilt data-open>
-      <img loading="lazy" decoding="async" src="images/projet1.jpg" alt="Régie son et lumière, Nuit de l'Excellence Africaine"><button class="play" aria-label="Voir la vidéo"></button>
-    </figure>
-    <div class="info">
-      <div class="top"><span class="lb">Projet 01</span><span>Prestige Live // 2024</span></div>
-      <h4>Nuit de l'excellence africaine</h4>
-      <p>Régie générale audiovisuelle, son spatialisé et conception d'une scénographie lumineuse dorée pour un parterre institutionnel de 1 200 invités.</p>
-      <div class="bt"><span>Palais des Congrès • Yaoundé</span><a class="lk" href="#" data-open>Fiche technique <span>→</span></a></div>
-    </div>
-  </article>
+  <!-- Pour chaque projet : data-mp4 = vidéo, data-preview = extrait muet au survol, data-photos = photos (séparées par des virgules) -->
+  <article class="proj p1" data-r data-youtube="" data-mp4="videos/cbc.mp4" data-preview="videos/cbc-preview.mp4">
+      <figure class="media reveal-img" data-par data-tilt data-open>
+        <img loading="lazy" decoding="async" src="images/cbc.jpg" alt="Film du 1er mai pour la CBC"><button class="play" aria-label="Visionner"></button>
+      </figure>
+      <div class="info">
+        <div class="top"><span class="lb">Projet 01</span><span>Événementiel // Banque</span></div>
+        <h4>1er Mai — CBC</h4>
+        <p>Film de la fête du travail du 1er mai pour la CBC, banque camerounaise : les images d'une journée de célébration.</p>
+        <div class="bt"><span>Fête du travail • CBC</span><a class="lk" href="#" data-open>Visionner <span>→</span></a></div>
+      </div>
+    </article>
 
-  <div class="row2">
-    <article class="proj p2" data-r data-youtube="" data-mp4="" data-preview="">
+  <div class="row2"><article class="proj p2" data-r data-youtube="" data-mp4="videos/claire-franck.mp4" data-preview="videos/claire-franck-preview.mp4">
       <figure class="media reveal-img" data-par data-tilt data-open>
-        <img loading="lazy" decoding="async" src="images/projet2.jpg" alt="Plateau de tournage, Héritage &amp; Terres d'Avenir"><button class="play" aria-label="Voir la vidéo"></button>
+        <img loading="lazy" decoding="async" src="images/claire-franck.jpg" alt="Teaser du mariage de Claire et Franck"><button class="play" aria-label="Visionner"></button>
       </figure>
       <div class="info">
-        <div class="top"><span class="lb">Projet 02</span><span>Campagne cinéma // 2023</span></div>
-        <h4>Héritage &amp; terres d'avenir</h4>
-        <p>Film manifeste tourné en 35mm numérique à travers cinq régions du Cameroun pour une institution financière panafricaine.</p>
-        <div class="bt"><span>Diffusion panafricaine &amp; numérique</span><a class="lk" href="#" data-open>Visionner <span>→</span></a></div>
+        <div class="top"><span class="lb">Projet 02</span><span>Mariage // Teaser</span></div>
+        <h4>Claire &amp; Franck</h4>
+        <p>Teaser du mariage de Claire et Franck : les émotions du grand jour, montées comme un court film.</p>
+        <div class="bt"><span>Teaser de mariage</span><a class="lk" href="#" data-open>Visionner <span>→</span></a></div>
       </div>
-    </article>
-    <article class="proj p3" data-r data-d="150" data-youtube="" data-mp4="" data-preview="">
-      <figure class="media reveal-img" data-par data-tilt data-open>
-        <img loading="lazy" decoding="async" src="images/projet3.jpg" alt="Série documentaire, Rythmes d'Ekié"><button class="play" aria-label="Voir la vidéo"></button>
+    </article><article class="proj p3" data-r data-youtube="" data-mp4="videos/teaser.mp4" data-preview="videos/teaser-preview.mp4">
+      <figure class="media reveal-img" data-par data-tilt data-open style="--ar:1.6">
+        <img loading="lazy" decoding="async" src="images/teaser.jpg" alt="Teaser J&amp;A Creative Agency"><button class="play" aria-label="Visionner"></button>
       </figure>
       <div class="info">
-        <div class="top"><span class="lb">Projet 03</span><span>Série documentaire // 2023</span></div>
-        <h4>Rythmes d'Ekié</h4>
-        <p>Immersion de six mois au sein des ateliers de création indépendante à Yaoundé. Regards croisés, son direct sans artifice.</p>
-        <div class="bt"><span>Festival &amp; diffusion VOD</span><a class="lk" href="#" data-open>En savoir plus <span>→</span></a></div>
+        <div class="top"><span class="lb">Projet 03</span><span>Teaser</span></div>
+        <h4>Teaser</h4>
+        <p>Teaser réalisé par J&amp;A Creative Agency : un format court, rythmé, pensé pour les réseaux.</p>
+        <div class="bt"><span>J&amp;A Creative Agency</span><a class="lk" href="#" data-open>Visionner <span>→</span></a></div>
+      </div>
+    </article></div>
+
+  <article class="proj p1" data-r data-photos="images/visavis.jpg">
+      <figure class="media reveal-img" data-par data-tilt data-open>
+        <img loading="lazy" decoding="async" src="images/visavis.jpg" alt="Concert au complexe Vis-à-Vis"><button class="play zoom" aria-label="Voir la photo"></button>
+      </figure>
+      <div class="info">
+        <div class="top"><span class="lb">Projet 04</span><span>Festival // Concert</span></div>
+        <h4>Vis-à-Vis Expérience</h4>
+        <p>Couverture photo du festival au complexe Vis-à-Vis : scène, lumières et public en plein concert.</p>
+        <div class="bt"><span>Complexe Vis-à-Vis</span><a class="lk" href="#" data-open>Voir la photo <span>→</span></a></div>
       </div>
     </article>
-  </div>
+
+  <div class="row2"><article class="proj p2" data-r data-photos="images/fecafoot.jpg">
+      <figure class="media reveal-img" data-par data-tilt data-open>
+        <img loading="lazy" decoding="async" src="images/fecafoot.jpg" alt="Cérémonie à la FECAFOOT"><button class="play zoom" aria-label="Voir la photo"></button>
+      </figure>
+      <div class="info">
+        <div class="top"><span class="lb">Projet 05</span><span>Cérémonie // Institutionnel</span></div>
+        <h4>Cérémonie FECAFOOT</h4>
+        <p>Couverture photo d'une cérémonie à la FECAFOOT, en présence de Samuel Eto'o.</p>
+        <div class="bt"><span>FECAFOOT</span><a class="lk" href="#" data-open>Voir la photo <span>→</span></a></div>
+      </div>
+    </article><article class="proj p3" data-r data-photos="images/shoot1.jpg,images/shoot2.jpg,images/shoot3.jpg">
+      <figure class="media reveal-img" data-par data-tilt data-open>
+        <img loading="lazy" decoding="async" src="images/shoot2.jpg" alt="Shooting créatif, portrait au bouquet de roses"><button class="play zoom" aria-label="Voir la galerie"></button>
+      </figure>
+      <div class="info">
+        <div class="top"><span class="lb">Projet 06</span><span>Shooting // Créatif</span></div>
+        <h4>Shootings créatifs</h4>
+        <p>Série de portraits créatifs : direction artistique, lumière de studio et retouche.</p>
+        <div class="bt"><span>3 photos</span><a class="lk" href="#" data-open>Voir la galerie <span>→</span></a></div>
+      </div>
+    </article></div>
+
+  <article class="proj p1" data-r data-photos="images/mariage.jpg">
+      <figure class="media reveal-img" data-par data-tilt data-open>
+        <img loading="lazy" decoding="async" src="images/mariage.jpg" alt="Découpe du gâteau lors d'un mariage"><button class="play zoom" aria-label="Voir la photo"></button>
+      </figure>
+      <div class="info">
+        <div class="top"><span class="lb">Projet 07</span><span>Mariage // Photo</span></div>
+        <h4>Mariage</h4>
+        <p>Photographie de mariage : la découpe du gâteau et les toasts, entre rires et émotion.</p>
+        <div class="bt"><span>Photographie événementielle</span><a class="lk" href="#" data-open>Voir la photo <span>→</span></a></div>
+      </div>
+    </article>
 </div>
 </section>
 
@@ -419,13 +471,17 @@ $('.proj').forEach(p=>{
 
 /* 6. Lecteur vidéo plein écran */
 const modal=document.getElementById('modal'),mv=document.getElementById('mv');
-let last;
+let last,slide=null;
 function openVid(host,trigger){
   last=trigger;
   const yt=host.dataset.youtube,mp=host.dataset.mp4,img=host.querySelector('img');
-  mv.innerHTML='';
+  mv.innerHTML='';slide=null;mv.classList.toggle('vert',!!host.dataset.vert);
+  const ph=(host.dataset.photos||'').split(',').filter(Boolean);
   if(yt){const f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/'+yt+'?autoplay=1&rel=0';f.allow='autoplay; fullscreen; picture-in-picture';f.allowFullscreen=true;mv.append(f)}
-  else if(mp){const v=document.createElement('video');v.src=mp;v.controls=true;v.autoplay=true;v.playsInline=true;mv.append(v)}
+  else if(mp){const v=document.createElement('video');v.src=mp;v.controls=true;v.autoplay=true;v.playsInline=true;v.preload='metadata';if(img)v.poster=img.currentSrc||img.src;mv.append(v)}
+  else if(ph.length){let i=0;const im=document.createElement('img');im.className='ph';im.src=ph[0];im.alt='';mv.append(im);
+    slide=d=>{i=(i+ph.length+d)%ph.length;im.src=ph[i]};
+    if(ph.length>1)[-1,1].forEach(d=>{const b=document.createElement('button');b.className='nv '+(d>0?'nx':'pv');b.textContent=d>0?'›':'‹';b.setAttribute('aria-label',d>0?'Photo suivante':'Photo précédente');b.onclick=e=>{e.stopPropagation();slide(d)};mv.append(b)})}
   else{const i=img.cloneNode();mv.append(i);const n=document.createElement('div');n.className='no';n.textContent='Vidéo bientôt disponible.';mv.append(n)}
   const h4=host.querySelector('h4'),lbs=host.querySelectorAll('.top span'),p=host.querySelector('.info p');
   document.getElementById('mt').textContent=host.dataset.title||(h4&&h4.textContent)||'';
@@ -439,7 +495,7 @@ document.addEventListener('click',e=>{
   if(t){e.preventDefault();openVid(t.closest('.proj')||t,t)}
   if(e.target===modal||e.target.closest('#mx'))closeVid();
 });
-addEventListener('keydown',e=>{if(e.key==='Escape'&&modal.classList.contains('on'))closeVid()});
+addEventListener('keydown',e=>{if(!modal.classList.contains('on'))return;if(e.key==='Escape')closeVid();if(slide&&e.key==='ArrowRight')slide(1);if(slide&&e.key==='ArrowLeft')slide(-1)});
 
 /* 8. GSAP + ScrollTrigger (si indisponible, le code ci-dessus prend le relais) */
 if(G&&!calm){
@@ -491,11 +547,10 @@ addEventListener('pointerdown',e=>{
 });
 </script>
 <!--
-README (pour toi) :
-1. Dossier images/ : remplace hero.jpg, portrait.jpg, projet1.jpg, projet2.jpg, projet3.jpg par tes vraies photos (mêmes noms).
-2. Vidéos : dans chaque <article class="proj" ...>, remplis data-youtube="ID_YOUTUBE" ou data-mp4="videos/nom.mp4".
-   data-preview="videos/nom-preview.mp4" = petit extrait muet qui se lance au survol. Même chose pour le reel sur la photo d'ouverture.
-3. Remplace mailto:contact@exemple.com, les numéros et les liens "#" des réseaux sociaux.
+README :
+- Photos dans images/, vidéos dans videos/ (chaque projet a sa vidéo + un extrait muet "-preview" qui se lance au survol).
+- Pour changer un média : remplace le fichier en gardant le même nom, ou modifie data-mp4 / data-photos / data-youtube sur le projet.
+- Remplace les liens "#" des réseaux (Vimeo, Instagram, LinkedIn, YouTube) et l'e-mail contact@exemple.com.
 -->
 </body>
 </html>
